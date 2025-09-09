@@ -32,21 +32,27 @@
     "start:dev": "tsx --watch src/server.ts",
     "start:prod": "node dist/server.js",
     "build": "tsc",
-    "lint": "eslint src/**/*.{ts,tsx}",
+    "lint": "eslint src/**/*.{ts,js}",
     "lint:fix": "eslint --fix src/**/*.{ts,js}",
     "format": "prettier --write src/**/*.{ts,js}",
-    "format:check": "prettier --check src/**/*.{ts,js}"
+    "format:check": "prettier --check src/**/*.{ts,js}",
+    "migrate:dev": "prisma migrate dev",
+    "studio": "prisma studio",
+    "generate": "prisma generate",
+    "migrate:prod": "prisma migrate deploy"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.1",
+    "@types/winston": "^2.4.4",
     "prettier": "^3.6.2",
     "prisma": "^6.15.0",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@prisma/client": "^6.15.0"
+    "@prisma/client": "^6.15.0",
+    "winston": "^3.17.0"
   }
 }

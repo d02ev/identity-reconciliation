@@ -1,4 +1,16 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "sqltools.connections": [
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "identity_reconciliation_db_dev",
+      "database": "identity_reconciliation_db",
+      "username": "postgres"
+    }
+  ]
 }

@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/models"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Contact {
+  id        Int       @id @default(autoincrement()) @map("id") @db.Integer
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt DateTime  @updatedAt @map("updated_at") @db.Timestamp(6)
+  deletedAt DateTime? @map("deleted_at") @db.Timestamp(6)
+
+  phoneNumber    String? @unique @map("phone_number") @db.VarChar(15)
+  email          String? @unique @map("email") @db.VarChar(255)
+  linkedId       Int?    @map("linked_id") @db.Integer
+  linkPrecedence String  @default("secondary") @map("link_precedence") @db.VarChar(255)
+
+  @@map("contacts")
+}
