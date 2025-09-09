@@ -1,0 +1,31 @@
+{
+  "name": "identity-reconciliation",
+  "version": "1.0.0",
+  "description": "identify and keep track of a customer's identity across multiple purchases",
+  "keywords": [
+    "node.js",
+    "express.js",
+    "node",
+    "express",
+    "postgresql",
+    "postgres",
+    "sql",
+    "typescript",
+    "prisma"
+  ],
+  "homepage": "https://github.com/d02ev/identity-reconciliation#readme",
+  "bugs": {
+    "url": "https://github.com/d02ev/identity-reconciliation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/d02ev/identity-reconciliation.git"
+  },
+  "license": "MIT",
+  "author": "Vikramaditya Pratap Singh (d02ev)",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
